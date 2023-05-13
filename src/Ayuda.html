@@ -1,3 +1,62 @@
-<div class="spinner-border m-5" role="status">
-  <span class="visually-hidden">Loading...</span>
-</div>
+<html>
+  <head>
+    <link rel="stylesheet" type="text/css" href="./css/style.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
+    <title>
+      BigBite
+    </title>
+    <link rel="shortcut icon" href="../images/LogoB.png">
+  </head>
+  <body>
+    <a class="visually-hidden-focusable" href="#content">Saltar a contenido principal</a>
+    <a class="visually-hidden-focusable" href="#content">Saltar a barra de búsqueda</a>
+    
+    <nav class="navbar navbar-expand-lg" style="background-color: #EAEAEA;">
+      <div class="container-fluid">
+        <a class="btn btn-primary" data-bs-toggle="offcanvas" href="#offcanvasExample" role="button" aria-controls="offcanvasExample" style="background-color: transparent; border-color: transparent;">
+          <img src="../images/TresBarrasHorizontales.png" width="35" height="40">
+        </a>
+        <a href="./IniciarSesion.html">
+          <button type="button" class="btn btn-light" style="border: 1px solid black; margin: 10px;">Iniciar Sesión</button>
+        </a>
+        <a href="./Ayuda.html">
+          <button type="button" class="btn btn-light" style="border: 1px solid black; margin: 10px;">Ayuda</button>
+        </a>
+        <a class="mx-auto navbar-brand"  href="../index.html" style="max-width: 100%;">
+          <img src="../images/LogoPrincipal.png" width="140" height="100" >
+        </a>
+        <form class="d-flex" role="search">
+          <input class="form-control me-2" type="search" placeholder="Buscar" aria-label="Search" style="border-color: black; color: black;">
+          <button type="button" class="btn btn-light" style="border: 1px solid black;">Buscar</button>
+        </form>
+      </div>
+    </nav>
+    <br><br>
+
+
+    
+    <!-- Barra lateral izquierda -->
+    <div class="offcanvas offcanvas-start" tabindex="-1" id="offcanvasExample" aria-labelledby="offcanvasExampleLabel">
+      <div class="offcanvas-header">
+        <h5 class="offcanvas-title" id="offcanvasExampleLabel">Offcanvas</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+      </div>
+      <div class="offcanvas-body">
+        <div>
+          Some text as placeholder. In real life you can have the elements you have chosen. Like, text, images, lists, etc.
+        </div>
+        <div class="dropdown mt-3">
+          <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown">
+            Dropdown button
+          </button>
+          <ul class="dropdown-menu">
+            <li><a class="dropdown-item" href="#">Action</a></li>
+            <li><a class="dropdown-item" href="#">Another action</a></li>
+            <li><a class="dropdown-item" href="#">Something else here</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

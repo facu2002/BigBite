@@ -1,7 +1,10 @@
 <html>
   <head>
-    <link rel="stylesheet" type="text/css" href="./src/style.css">
+    <script src="./src/js/tools.js"></script>
+    <link rel="stylesheet" type="text/css" href="./src/css/style.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css" rel="stylesheet">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
     <title>
       BigBite
@@ -16,76 +19,58 @@
     
     <nav class="navbar navbar-expand-lg" style="background-color: #EAEAEA;">
       <div class="container-fluid">
-      <a class="btn btn-primary" data-bs-toggle="offcanvas" href="#offcanvasExample" role="button" aria-controls="offcanvasExample" style="background-color: transparent; border-color: transparent;">
-        <img src="./images/TresBarrasHorizontales.png" width="35" height="40">
-      </a>
-      <a href="./src/IniciarSesion.html">
-        <button type="button" class="btn btn-light" style="border: 1px solid black; margin: 10px;">Iniciar Sesión</button>
-      </a>
-      <a href="./src/Ayuda.html">
-        <button type="button" class="btn btn-light" style="border: 1px solid black; margin: 10px;">Ayuda</button>
-      </a>
-
+        <a class="btn btn-primary" data-bs-toggle="offcanvas" href="#offcanvasExample" role="button" aria-controls="offcanvasExample" style="background-color: transparent; border-color: transparent;">
+          <img src="./images/TresBarrasHorizontales.png" width="35" height="40">
+        </a>
+        <a href="./src/IniciarSesion.html">
+          <button type="button" class="btn btn-light" style="border: 1px solid black; margin: 10px;">Iniciar Sesión</button>
+        </a>
+        <a href="./src/Ayuda.html">
+          <button type="button" class="btn btn-light" style="border: 1px solid black; margin: 10px;">Ayuda</button>
+        </a>
         <a class="mx-auto navbar-brand"  href="./index.html" style="max-width: 100%;">
           <img src="./images/LogoPrincipal.png" width="140" height="100" >
         </a>
-
         <form class="d-flex" role="search">
           <input class="form-control me-2" type="search" placeholder="Buscar" aria-label="Search" style="border-color: black; color: black;">
           <button type="button" class="btn btn-light" style="border: 1px solid black;">Buscar</button>
         </form>
       </div>
     </nav>
-    
-    <br>
-
-    
-   
-
-    <br>
-    <a href="nueva_pagina.html">
-      <div class="container text-center ">
-        <div class="row align-items-center">
-          <div class="col">
-            <div class="card" style="width: 18rem;">
-              <img src="..." class="card-img-top" alt="...">
-              <div class="card-body">
-                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-              </div>
-            </div>        </div>
-          <div class="col">
-            <div class="card" style="width: 18rem;">
-              <img src="..." class="card-img-top" alt="...">
-              <div class="card-body">
-                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-              </div>
-            </div>        
-          </div>
+    <br><br>
+     
+    <!-- Contenedor de las tarjetas Mostrar Recetas y Publicar Recetas -->
+    <div class="container d-flex justify-content-center">      
+      <div class="card d-inline-block mx-auto text-center" style="width: 30rem; height: 25rem; display: flex; justify-content: center; align-items: center; border: 1px solid #c9c9c9;">
+        <img src="./images/Pasta.jpg" class="card-img-top" alt="..." style="width: 450; height: 300; margin-top: 15;">
+        <div class="card-body">
+          <a href="./src/VerReceta.html">
+            <button type="button" class="btn btn-outline-dark btn-lg">Mostrar Recetas</button>
+          </a>  
         </div>
       </div>
-    </a>
-
-    <br>
-
-    <a href="nueva_pagina.html">
-      <div class="container text-center ">
-        <div class="row align-items-center">
-          <div class="card mx-auto" style="max-width: 100%;">
-            <img src="images/Tortita.jpg" class="card-img-top" alt="...">
-            <div class="card-body">
-              <h5 class="card-title">Ingrediente de oro</h5>
-              <p class="card-text">El ingrediente ganador de esta semana es la avena, entra y ve algunas de las recetas más destacadas que usan este increible ingrediente.</p>
-              <p class="card-text"><small class="text-body-secondary">Last updated 3 mins ago</small></p>
-            </div>
-          </div>
+      <div class="card d-inline-block mx-auto text-center" style="width: 30rem; height: 25rem; display: flex; justify-content: center; align-items: center; border: 1px solid #c9c9c9;">
+        <img src="./images/Tortita.jpg" class="card-img-top" alt="..." style="width: 450; height: 300; margin-top: 15;">
+        <div class="card-body">
+          <a href="./src/PublicarReceta.html">
+            <button type="button" class="btn btn-outline-dark btn-lg">Publicar Recetas</button>
+          </a>   
         </div>
       </div>
-    </a>
+    </div>
+    
+    <br><br><br>
 
-
-    <br>
-
+    <!-- Contenedor de las tarjetas Mostrar Recetas y Publicar Recetas -->
+    <div class="container d-flex justify-content-center">      
+      <div class="card d-inline-block" style="width: 70rem; height: 25rem; display: flex; justify-content: center; align-items: center; border: 1px solid #c9c9c9;">
+        <img src="./images/Burguer.jpg" class="card-img-top" alt="..." style="width: 450; height: 300; margin-top: 15; margin-left: 15;">
+        <div class="card-body"></div>
+      </div>
+    </div>
+    
     <!-- Barra lateral izquierda -->
+    <br><br><br>
     <div class="offcanvas offcanvas-start" tabindex="-1" id="offcanvasExample" aria-labelledby="offcanvasExampleLabel">
       <div class="offcanvas-header">
         <h5 class="offcanvas-title" id="offcanvasExampleLabel">Offcanvas</h5>
@@ -98,15 +83,51 @@
       </div>
     </div>
 
-    <!-- Números de páginas del final -->
-    <nav aria-label="Page navigation example">
-      <ul class="pagination">
-        <li class="page-item"><a class="page-link" href="#">Previous</a></li>
-        <li class="page-item"><a class="page-link" href="#">1</a></li>
-        <li class="page-item"><a class="page-link" href="#">2</a></li>
-        <li class="page-item"><a class="page-link" href="#">3</a></li>
-        <li class="page-item"><a class="page-link" href="#">Next</a></li>
-      </ul>
-    </nav>
+    <!-- Botón que devuelve al usuario al principio de la página -->
+    <button class="btn btn-dark float-end" onclick="deslizarArriba()" style="position: fixed; margin-right: 20px; margin-bottom: 10px;">&#8593;</button>
+
+    <br><br><br><br><br>
+    <div class="container text-center">
+      <div class="row align-items-center">
+        <div class="col">
+          <p class="display-5"><strong>Contacto</strong></p>
+        </div>
+      </div>
+      <hr class="border-botton border-2 border-primary" style="margin-bottom: 20px;">
+      <div class="row justify-content-center">
+        <div class="col-2 text-center">
+          <a href="https://www.facebook.com" title="Visita nuestra página de Facebook"><i class="bi bi-facebook"></i></a>
+        </div>
+        <div class="col-2 text-center">
+          <a href="https://www.twitter.com" title="Visita nuestro perfil de Twitter"><i class="bi bi-twitter"></i></a>
+        </div>
+        <div class="col-2 text-center">
+          <a href="https://www.instagram.com" title="Visita nuestro perfil de Instagram"><i class="bi bi-instagram"></i></a>
+        </div>
+        <div class="col-2 text-center">
+          <a href="mailto:correo@example.com" title="Envíanos un correo electrónico"><i class="bi bi-envelope-fill"></i></a>
+        </div>
+      </div> 
+      <hr class="border-botton border-2 border-primary" style="margin-bottom: 20px;">
+      <div class="row justify-content-center">
+        <div class="col-2 text-center">
+          <a href="preguntas-frecuentes.html"><strong>Preguntas frecuentes</strong></a>
+        </div>
+        <div class="col-2 text-center">
+          <a href="acerca-de-nosotros.html"><strong>Acerca de nosotros</strong></a>
+        </div>
+        <div class="col-2 text-center">
+          <a href="privacidad.html"><strong>Privacidad</strong></a>
+        </div>
+        <div class="col-2 text-center">
+          <a href="terminos-y-condiciones.html"><strong>Términos y condiciones</strong></a>
+        </div>
+      </div>
+    </div>
+
+    <button class="btn btn-dark float-end" onclick="deslizarArriba()" style="margin-right: 20px; margin-bottom: 20px;">&#8593;</button>
+
+
+    <br>
   </body>
 </html>
