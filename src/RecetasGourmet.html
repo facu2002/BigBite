@@ -17,27 +17,33 @@
     <a class="visually-hidden-focusable" href="#content">Saltar a contenido principal</a>
     <a class="visually-hidden-focusable" href="#content">Saltar a barra de búsqueda</a>
     
-    <nav class="navbar navbar-expand-lg" style="background-color: #EAEAEA;">
+    <nav class="navbar">
       <div class="container-fluid">
+        <!-- Botón para el menú lateral -->
         <a class="btn btn-primary" data-bs-toggle="offcanvas" href="#offcanvasExample" role="button" aria-controls="offcanvasExample" style="background-color: transparent; border-color: transparent;">
-          <img src="../images/TresBarrasHorizontales.png" width="35" height="40">
+          <img src="../images/TresBarrasHorizontales.png" width="45" height="50">
         </a>
-        <a href="../src/IniciarSesion.html">
-          <button type="button" class="btn btn-light" style="border: 1px solid black; margin: 10px;">Iniciar Sesión</button>
+        <!-- Botón para iniciar sesión -->
+        <a href="./IniciarSesion.html" style="margin: 10px;">
+          <button class="btn btn-dark" type="submit">Iniciar Sesión</button>
         </a>
-        <a href="../src/Ayuda.html">
-          <button type="button" class="btn btn-light" style="border: 1px solid black; margin: 10px;">Ayuda</button>
+        <!-- Botón para la ayuda -->
+        <a href="./Ayuda.html" style="margin: 10px;">
+          <button type="button" class="btn btn-outline-dark">Ayuda</button>
+          <!-- <button class="btn btn-dark" type="submit">Ayuda</button> -->
         </a>
-        <a class="mx-auto navbar-brand"  href="../index.html" style="max-width: 100%;">
-          <img src="../images/LogoPrincipal.png" width="140" height="100" >
+        <!-- Logo principal de la página -->
+        <a class="mx-auto navbar-brand" href="../index.html" style="max-width: 100%;">
+          <img src="../images/LogoPrincipal.png" width="170" height="130" >
         </a>
-        <form class="d-flex" role="search">
-          <input class="form-control me-2" type="search" placeholder="Buscar" aria-label="Search" style="border-color: black; color: black;">
-          <button type="button" class="btn btn-light" style="border: 1px solid black;">Buscar</button>
-        </form>
+        <!-- Botón de buscar y campo input para buscar -->
+        <div class="d-flex" role="search" style="margin: 10px;">
+          <input class="form-control me-2" type="search" placeholder="Buscar" aria-label="Search">
+          <button class="btn btn-dark" type="submit">Buscar</button>
+        </div>
       </div>
     </nav>
-
+    <br>
 
 
     <div class="container">
@@ -49,18 +55,9 @@
         </ol>
       </nav>
     </div>
-    <br>
-
-
-      
+    <br>    
     
 
-
-
-    
-    
-
-    <hr class="border-botton border-2 border-primary" style="margin-bottom: 20px;">
 
     <div class="container my-5">
       <h1 class="display-5 fw-bold lh-1 mb-3 text-center">Las recetas para los dias gourmet</h1>
@@ -149,6 +146,56 @@
 
     <button class="btn btn-dark float-end" onclick="deslizarArriba()" style="margin-right: 20px;">&#8593;</button>
 
+    <!-- Barra lateral izquierda -->
+    <div class="offcanvas offcanvas-start" tabindex="-1" id="offcanvasExample" aria-labelledby="offcanvasExampleLabel">
+      <div class="offcanvas-header">
+          <!-- Logo principal de la página -->
+          <a class="mx-auto navbar-brand" href="./index.html" style="display: block; margin: 0 auto; max-width: 100%;">
+            <img src="../images/LogoSecundario.png" width="170" height="130">
+          </a>
+        
+        
+        <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+      </div>
+      <div class="offcanvas-body">
+        <div>
+          <hr class="border-botton border-2 border-primary">
+          <!-- Enlace directo a la página de inicio de sesión -->
+          <a class="mx-auto navbar-brand" href="./IniciarSesion.html" style="max-width: 100%;">
+            <button type="button" class="btn btn-outline-dark" style="margin: 2%; border-color: rgba(255, 255, 255, 0);">Iniciar Sesión</button>
+          </a><br>
+          <!-- Enlace directo a la página de registro -->
+          <a class="mx-auto navbar-brand" href="./Registrarse.html" style="max-width: 100%;">
+            <button type="button" class="btn btn-outline-dark" style="margin: 2%; border-color:  rgba(255, 255, 255, 0)">Registrarse</button>
+          </a><br>
+          <!-- Enlace directo a la página de ayuda -->
+          <a class="mx-auto navbar-brand" href="./Ayuda.html" style="max-width: 100%;">
+            <button type="button" class="btn btn-outline-dark" style="margin: 2%; border-color:  rgba(255, 255, 255, 0)">Ayuda</button>
+          </a><br>
+          <hr class="border-botton border-2 border-primary">
+          <!-- Enlace directo a la página de publicar receta -->
+          <a class="mx-auto navbar-brand" href="./PublicarReceta.html" style="max-width: 100%;">
+            <button type="button" class="btn btn-outline-dark" style="margin: 2%; border-color:  rgba(255, 255, 255, 0)">Publicar Receta</button>
+          </a><br>
+          <!-- Enlace directo a la página de ver recetas -->
+          <a class="mx-auto navbar-brand" href="./VerReceta.html" style="max-width: 100%;">
+            <button type="button" class="btn btn-outline-dark" style="margin: 2%; border-color:  rgba(255, 255, 255, 0)">Mostrar Receta</button>
+          </a><br>
+          <!-- Enlace directo a la página de ver recetas gourmet -->
+          <a class="mx-auto navbar-brand" href="./RecetasGourmet.html" style="max-width: 100%; padding-left: 40;">
+            <button type="button" class="btn btn-outline-dark" style="margin: 2%; border-color:  rgba(255, 255, 255, 0)">Recetas gourmet</button>
+          </a><br>
+          <!-- Enlace directo a la página de ver recetas sencillas -->
+          <a class="mx-auto navbar-brand" href="./RecetasSencillas.html" style="max-width: 100%; padding-left: 40;">
+            <button type="button" class="btn btn-outline-dark" style="margin: 2%; border-color:  rgba(255, 255, 255, 0)">Recetas sencillas</button>
+          </a><br>
+          <!-- Enlace directo a la página de ver recetas económicas -->
+          <a class="mx-auto navbar-brand" href="./RecetasEconomicas.html" style="max-width: 100%; padding-left: 40;">
+            <button type="button" class="btn btn-outline-dark" style="margin: 2%; border-color:  rgba(255, 255, 255, 0)">Recetas económicas</button>
+          </a><br>
+        </div>
+      </div>
+    </div>
 
      
   </body>

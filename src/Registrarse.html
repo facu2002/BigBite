@@ -1,7 +1,10 @@
 <html>
   <head>
+    <script src="./src/js/tools.js"></script>
     <link rel="stylesheet" type="text/css" href="./css/style.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css" rel="stylesheet">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
     <title>
       BigBite
@@ -11,7 +14,7 @@
   <body>
     <a class="visually-hidden-focusable" href="#content">Saltar a contenido principal</a>
     <a class="visually-hidden-focusable" href="#content">Saltar a barra de búsqueda</a>
-  
+    
     <nav class="navbar">
       <div class="container-fluid">
         <!-- Botón para el menú lateral -->
@@ -25,6 +28,7 @@
         <!-- Botón para la ayuda -->
         <a href="./Ayuda.html" style="margin: 10px;">
           <button type="button" class="btn btn-outline-dark">Ayuda</button>
+          <!-- <button class="btn btn-dark" type="submit">Ayuda</button> -->
         </a>
         <!-- Logo principal de la página -->
         <a class="mx-auto navbar-brand" href="../index.html" style="max-width: 100%;">
@@ -37,67 +41,139 @@
         </div>
       </div>
     </nav>
-    <br>
 
+    <br>
+    
     <div class="container">
       <nav style="--bs-breadcrumb-divider: '>';" aria-label="breadcrumb">
         <ol class="breadcrumb">
           <li class="breadcrumb-item"><a href="../index.html">Principal</a></li>
-          <li class="breadcrumb-item active" aria-current="page">Ayuda</li>
+          <li class="breadcrumb-item"><a href="../src/VerReceta.html">Ver Recetas</a></li>
+          <li class="breadcrumb-item active" aria-current="page">Recetas económicas</li>
         </ol>
       </nav>
     </div>
 
-    <section class="container my-5">
-      <h1 class="display-5 fw-bold lh-1 mb-3 text-center">¿Necesitas ayuda?</h1><br>
+    <br>
+
+    <div class="container">
       <div class="row">
-        <div class="col-md-6">
-          <h2 class="mb-3">Cómo subir una receta</h2>
-          <p>Para subir una receta en nuestra página sigue estos sencillos pasos:</p>
-          <ol class="ms-3">
-            <li>Inicia sesión en tu cuenta o regístrate si aún no tienes una.</li>
-            <li>Dirígete a la página de subir recetas.</li>
-            <li>Rellena los campos de título, ingredientes y pasos.</li>
-            <li>Sube una imagen de la receta.</li>
-            <li>Publica tu receta y ¡listo!</li>
-          </ol>
+        <div class="col-lg-6 mb-5 mb-lg-0">
+          <img src="https://via.placeholder.com/700x700" alt="Imagen de inicio de sesión" class="img-fluid">
         </div>
-        <div class="col-md-6">
-          <h2 class="mb-3">Cómo buscar una receta</h2>
-          <p>Para buscar una receta en nuestra página sigue estos pasos:</p>
-          <ol class="ms-3">
-            <li>En la barra de búsqueda escribe el nombre de la receta o un ingrediente que quieras incluir en ella.</li>
-            <li>Haz clic en el botón de "Buscar".</li>
-            <li>Verás una lista de resultados de recetas que coinciden con tu búsqueda.</li>
-            <li>Haz clic en una receta para ver los detalles y la información completa.</li>
-          </ol>
+        <div class="col-lg-6">
+          <br><br><br>
+          <h1 class="display-5 fw-bold lh-1 mb-3 text-center">Registrarse</h1><br>
+          <form class="text-center">
+            <div class="row">
+                <div class="mb-3">
+                  <label for="email" class="form-label visually-hidden">Correo electrónico</label>
+                  <input type="email" class="form-control" id="email" placeholder="Correo electrónico" required>
+                </div>
+                <div class="mb-3">
+                  <label for="password" class="form-label visually-hidden">Contraseña</label>
+                  <input type="password" class="form-control" id="password" placeholder="Contraseña" required>
+                </div>
+                <div class="mb-3">
+                  <label for="confirm-password" class="form-label visually-hidden">Confirmar contraseña</label>
+                  <input type="password" class="form-control" id="confirm-password" placeholder="Confirmar contraseña" required>
+                </div>
+                <div class="mb-3">
+                  <label for="name" class="form-label visually-hidden">Nombre completo</label>
+                  <input type="text" class="form-control" id="name" placeholder="Nombre completo" required>
+                </div>
+                <div class="mb-3">
+                  <label for="phone" class="form-label visually-hidden">Teléfono</label>
+                  <input type="tel" class="form-control" id="phone" placeholder="Teléfono" required>
+                </div>
+                <div class="mb-3">
+                  <label for="birthdate" class="form-label visually-hidden">Fecha de nacimiento</label>
+                  <input type="date" class="form-control" id="birthdate" placeholder="Fecha de nacimiento" required>
+                </div>
+            
+            </div>
+            <button class="btn btn-dark" type="submit">Registrarse</button>
+          </form>
+          
         </div>
       </div>
-      <div class="row">
-        <div class="col-md-6">
-          <h2 class="mb-3">Cómo editar una receta</h2>
-          <p>Para editar una receta que ya has publicado sigue estos pasos:</p>
-          <ol class="ms-3">
-            <li>Inicia sesión en tu cuenta.</li>
-            <li>Ve a la página de tu perfil y busca la receta que quieres editar.</li>
-            <li>Haz clic en el botón de "Editar" que aparece en la receta.</li>
-            <li>Modifica los campos que desees y sube una nueva imagen si quieres cambiarla.</li>
-            <li>Guarda los cambios y tu receta estará actualizada.</li>
-          </ol>
-        </div>
-        <div class="col-md-6">
-          <h2 class="mb-3">Cómo eliminar una receta</h2>
-          <p>Para eliminar una receta que ya has publicado sigue estos pasos:</p>
-          <ol class="ms-3">
-            <li>Inicia sesión en tu cuenta.</li>
-            <li>Ve a la página de tu perfil y busca la receta que quieres eliminar.</li>
-            <li>Haz clic en el botón de "Eliminar" que aparece en la receta.</li>
-            <li>Confirma que deseas eliminar la receta y listo.</li>
-          </ol>
-        </div>
-      </div>
-    </section>
+    </div>
+
+    <br>
     
+
+
+
+    <!-- Barra lateral izquierda -->
+    <div class="offcanvas offcanvas-start" tabindex="-1" id="offcanvasExample" aria-labelledby="offcanvasExampleLabel">
+      <div class="offcanvas-header">
+        <h5 class="offcanvas-title" id="offcanvasExampleLabel">Offcanvas</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+      </div>
+      <div class="offcanvas-body">
+        <div>
+          Some text as placeholder. In real life you can have the elements you have chosen. Like, text, images, lists, etc.
+        </div>
+        <div class="dropdown mt-3">
+          <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown">
+            Dropdown button
+          </button>
+          <ul class="dropdown-menu">
+            <li><a class="dropdown-item" href="#">Action</a></li>
+            <li><a class="dropdown-item" href="#">Another action</a></li>
+            <li><a class="dropdown-item" href="#">Something else here</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    
+    <br><br><br>
+    <hr class="border-botton border-2 border-primary">
+    <br><br>
+
+    <!-- Botón que devuelve al usuario al principio de la página -->
+    <button class="btn btn-dark float-end" onclick="deslizarArriba()" style="margin-right: 20px;">&#8593;</button>
+    
+    <div class="container text-center">
+      <div class="row align-items-center">
+        <div class="col">
+          <h1 class="display-5 fw-bold lh-1 mb-3 text-center">Contacto</h1>
+        </div>
+      </div>
+      <hr class="border-botton border-2 border-primary" style="margin-bottom: 20px;">
+      <div class="row justify-content-center">
+        <div class="col-2 text-center">
+          <a href="https://www.facebook.com" title="Visita nuestra página de Facebook"><i class="bi bi-facebook"></i></a>
+        </div>
+        <div class="col-2 text-center">
+          <a href="https://www.twitter.com" title="Visita nuestro perfil de Twitter"><i class="bi bi-twitter"></i></a>
+        </div>
+        <div class="col-2 text-center">
+          <a href="https://www.instagram.com" title="Visita nuestro perfil de Instagram"><i class="bi bi-instagram"></i></a>
+        </div>
+        <div class="col-2 text-center">
+          <a href="mailto:correo@example.com" title="Envíanos un correo electrónico"><i class="bi bi-envelope-fill"></i></a>
+        </div>
+      </div> 
+      <hr class="border-botton border-2 border-primary" style="margin-bottom: 20px;">
+      <div class="row justify-content-center">
+        <div class="col-2 text-center">
+          <a href="preguntas-frecuentes.html"><strong>Preguntas frecuentes</strong></a>
+        </div>
+        <div class="col-2 text-center">
+          <a href="acerca-de-nosotros.html"><strong>Acerca de nosotros</strong></a>
+        </div>
+        <div class="col-2 text-center">
+          <a href="privacidad.html"><strong>Privacidad</strong></a>
+        </div>
+        <div class="col-2 text-center">
+          <a href="terminos-y-condiciones.html"><strong>Términos y condiciones</strong></a>
+        </div>
+      </div>
+    </div>
+    <br><br><br>
+
     
     <!-- Barra lateral izquierda -->
     <div class="offcanvas offcanvas-start" tabindex="-1" id="offcanvasExample" aria-labelledby="offcanvasExampleLabel">

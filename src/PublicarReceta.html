@@ -18,98 +18,140 @@
     <a class="visually-hidden-focusable" href="#content">Saltar a contenido principal</a>
     <a class="visually-hidden-focusable" href="#content">Saltar a barra de búsqueda</a>
     
-    <!-- Barra de navegación -->
-    <nav class="navbar navbar-expand-lg" style="background-color: #EAEAEA;">
+    <nav class="navbar">
       <div class="container-fluid">
+        <!-- Botón para el menú lateral -->
         <a class="btn btn-primary" data-bs-toggle="offcanvas" href="#offcanvasExample" role="button" aria-controls="offcanvasExample" style="background-color: transparent; border-color: transparent;">
-          <img src="../images/TresBarrasHorizontales.png" width="35" height="40">
+          <img src="../images/TresBarrasHorizontales.png" width="45" height="50">
         </a>
-        <a href="../src/IniciarSesion.html">
-          <button type="button" class="btn btn-light" style="border: 1px solid black; margin: 10px;">Iniciar Sesión</button>
+        <!-- Botón para iniciar sesión -->
+        <a href="./IniciarSesion.html" style="margin: 10px;">
+          <button class="btn btn-dark" type="submit">Iniciar Sesión</button>
         </a>
-        <a href="../src/Ayuda.html">
-          <button type="button" class="btn btn-light" style="border: 1px solid black; margin: 10px;">Ayuda</button>
+        <!-- Botón para la ayuda -->
+        <a href="./Ayuda.html" style="margin: 10px;">
+          <button type="button" class="btn btn-outline-dark">Ayuda</button>
+          <!-- <button class="btn btn-dark" type="submit">Ayuda</button> -->
         </a>
-        <a class="mx-auto navbar-brand"  href="../index.html" style="max-width: 100%;">
-          <img src="../images/LogoPrincipal.png" width="140" height="100" >
+        <!-- Logo principal de la página -->
+        <a class="mx-auto navbar-brand" href="../index.html" style="max-width: 100%;">
+          <img src="../images/LogoPrincipal.png" width="170" height="130" >
         </a>
-        <form class="d-flex" role="search">
-          <input class="form-control me-2" type="search" placeholder="Buscar" aria-label="Search" style="border-color: black; color: black;">
-          <button type="button" class="btn btn-light" style="border: 1px solid black;">Buscar</button>
-        </form>
+        <!-- Botón de buscar y campo input para buscar -->
+        <div class="d-flex" role="search" style="margin: 10px;">
+          <input class="form-control me-2" type="search" placeholder="Buscar" aria-label="Search">
+          <button class="btn btn-dark" type="submit">Buscar</button>
+        </div>
       </div>
     </nav>
-    <br><br>
+    <br>
 
-    <h1 class="display-5 fw-bold lh-1 mb-3 text-center">¿Con qúe platillo nos sorprenderas hoy?</h1>
+    <div class="container">
+      <nav style="--bs-breadcrumb-divider: '>';" aria-label="breadcrumb">
+        <ol class="breadcrumb">
+          <li class="breadcrumb-item"><a href="../index.html">Principal</a></li>
+          <li class="breadcrumb-item active" aria-current="page">Publicar receta</li>
+        </ol>
+      </nav>
+    </div>
+    <br><br>
+    
+    <h1 class="display-5 fw-bold lh-1 mb-3 text-center">¿Con qué receta nos sorprenderas hoy?</h1>
     <br><br>
 
     
     <div class="container">
       <form>
-        <div class="row mb-4">
-          <div class="col">
-            <div class="mb-4 d-flex justify-content-center">
-              <img src="https://mdbootstrap.com/img/Photos/Others/placeholder.jpg"
-              alt="example placeholder" style="width: 300px;" />
-          </div>
-          <div class="d-flex justify-content-center">
-              <div class="btn btn-primary btn-rounded">
-                  <button type="button" class="btn btn-outline-dark btn-lg">Subir Receta</button>
-
-                  <label class="form-label text-white m-1" for="customFile1">Sube una imagen</label>
-                  <input type="file" class="form-control d-none" id="customFile1" />
-              </div>
-          </div>
-          </div>
+        <div class="mb-3">
+          <label for="titulo" class="form-label" style="color: #2c3e50; font-weight: bold; font-size: 1.2rem;">Título de la receta *</label>
+          <input type="text" class="form-control" id="titulo" required style="background-color: #ecf0f1; border-color: #bdc3c7; color: #34495e; font-size: 1.1rem;">
         </div>
-
-        <!-- 2 column grid layout with text inputs for the first and last names -->
-        <div class="row mb-4">
-        <div class="col">
-            <div class="form-outline">
-            <input type="text" id="form6Example1" class="form-control" />
-            <label class="form-label" for="form6Example1">Nombre del platillo</label>
-            </div>
+        <div class="mb-3">
+          <label for="ingredientes" class="form-label" style="color: #2c3e50; font-weight: bold; font-size: 1.2rem;">Ingredientes *</label>
+          <textarea class="form-control" id="ingredientes" rows="3" required style="background-color: #ecf0f1; border-color: #bdc3c7; color: #34495e; font-size: 1.1rem;"></textarea>
         </div>
-        <div class="col">
-            <div class="form-outline">
-            <input type="text" id="form6Example2" class="form-control" />
-            <label class="form-label" for="form6Example2">Tipo de comida</label>
-            </div>
+        <div class="mb-3">
+          <label for="preparacion" class="form-label" style="color: #2c3e50; font-weight: bold; font-size: 1.2rem;">Preparación *</label>
+          <textarea class="form-control" id="preparacion" rows="5" required style="background-color: #ecf0f1; border-color: #bdc3c7; color: #34495e; font-size: 1.1rem;"></textarea>
         </div>
+        <div class="mb-3">
+          <label for="categoria" class="form-label" style="color: #2c3e50; font-weight: bold; font-size: 1.2rem;">Categoría *</label>
+          <select class="form-select" id="categoria" required style="background-color: #ecf0f1; border-color: #bdc3c7; color: #34495e; font-size: 1.1rem;">
+            <option value="" selected disabled style="color: #bdc3c7;">Seleccione una categoría</option>
+            <option value="entradas">Entradas</option>
+            <option value="platos-principales">Platos principales</option>
+            <option value="platos-principales">Meriendas</option>
+            <option value="platos-principales">Fiestas</option>
+            <option value="platos-principales">Sopas</option>
+            <option value="postres">Postres</option>
+          </select>
         </div>
-    
-        <!-- Message input -->
-        <div class="form-outline mb-4">
-        <textarea class="form-control" id="form6Example7" rows="4"></textarea>
-        <label class="form-label" for="form6Example7">Describe la recta</label>
+        <div class="mb-3">
+          <label for="imagen" class="form-label" style="color: #2c3e50; font-weight: bold; font-size: 1.2rem;">Imagen de la receta *</label>
+          <input class="form-control" type="file" id="imagen" required style="background-color: #ecf0f1; border-color: #bdc3c7; color: #34495e; font-size: 1.1rem;">
         </div>
-  
-    
-        <!-- Submit button -->
-        <button type="button" class="btn btn-outline-dark btn-lg">Subir Receta</button>
-
-      </form>
+        <button type="submit" class="btn btn-primary" style="background-color: #2c3e50; border-color: #2c3e50; font-size: 1.2rem;">Enviar</button>
+      </form>    
     </div>
  
+
 
 
     <!-- Barra lateral izquierda -->
     <div class="offcanvas offcanvas-start" tabindex="-1" id="offcanvasExample" aria-labelledby="offcanvasExampleLabel">
       <div class="offcanvas-header">
-        <h5 class="offcanvas-title" id="offcanvasExampleLabel">Menú principal</h5>
+          <!-- Logo principal de la página -->
+          <a class="mx-auto navbar-brand" href="./index.html" style="display: block; margin: 0 auto; max-width: 100%;">
+            <img src="../images/LogoSecundario.png" width="170" height="130">
+          </a>
+        
+        
         <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
       </div>
       <div class="offcanvas-body">
         <div>
-          
+          <hr class="border-botton border-2 border-primary">
+          <!-- Enlace directo a la página de inicio de sesión -->
+          <a class="mx-auto navbar-brand" href="./IniciarSesion.html" style="max-width: 100%;">
+            <button type="button" class="btn btn-outline-dark" style="margin: 2%; border-color: rgba(255, 255, 255, 0);">Iniciar Sesión</button>
+          </a><br>
+          <!-- Enlace directo a la página de registro -->
+          <a class="mx-auto navbar-brand" href="./Registrarse.html" style="max-width: 100%;">
+            <button type="button" class="btn btn-outline-dark" style="margin: 2%; border-color:  rgba(255, 255, 255, 0)">Registrarse</button>
+          </a><br>
+          <!-- Enlace directo a la página de ayuda -->
+          <a class="mx-auto navbar-brand" href="./Ayuda.html" style="max-width: 100%;">
+            <button type="button" class="btn btn-outline-dark" style="margin: 2%; border-color:  rgba(255, 255, 255, 0)">Ayuda</button>
+          </a><br>
+          <hr class="border-botton border-2 border-primary">
+          <!-- Enlace directo a la página de publicar receta -->
+          <a class="mx-auto navbar-brand" href="./PublicarReceta.html" style="max-width: 100%;">
+            <button type="button" class="btn btn-outline-dark" style="margin: 2%; border-color:  rgba(255, 255, 255, 0)">Publicar Receta</button>
+          </a><br>
+          <!-- Enlace directo a la página de ver recetas -->
+          <a class="mx-auto navbar-brand" href="./VerReceta.html" style="max-width: 100%;">
+            <button type="button" class="btn btn-outline-dark" style="margin: 2%; border-color:  rgba(255, 255, 255, 0)">Mostrar Receta</button>
+          </a><br>
+          <!-- Enlace directo a la página de ver recetas gourmet -->
+          <a class="mx-auto navbar-brand" href="./RecetasGourmet.html" style="max-width: 100%; padding-left: 40;">
+            <button type="button" class="btn btn-outline-dark" style="margin: 2%; border-color:  rgba(255, 255, 255, 0)">Recetas gourmet</button>
+          </a><br>
+          <!-- Enlace directo a la página de ver recetas sencillas -->
+          <a class="mx-auto navbar-brand" href="./RecetasSencillas.html" style="max-width: 100%; padding-left: 40;">
+            <button type="button" class="btn btn-outline-dark" style="margin: 2%; border-color:  rgba(255, 255, 255, 0)">Recetas sencillas</button>
+          </a><br>
+          <!-- Enlace directo a la página de ver recetas económicas -->
+          <a class="mx-auto navbar-brand" href="./RecetasEconomicas.html" style="max-width: 100%; padding-left: 40;">
+            <button type="button" class="btn btn-outline-dark" style="margin: 2%; border-color:  rgba(255, 255, 255, 0)">Recetas económicas</button>
+          </a><br>
         </div>
       </div>
     </div>
     
+    <br><br><br>
+    <hr class="border-botton border-2 border-primary">
+    <br><br>
     
-
     <!-- Botón que devuelve al usuario al principio de la página -->
     <button class="btn btn-dark float-end" onclick="deslizarArriba()" style="margin-right: 20px;">&#8593;</button>
     
