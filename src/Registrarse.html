@@ -12,36 +12,35 @@
     <link rel="shortcut icon" href="../images/LogoB.png">
   </head>
   <body>
-    <a class="visually-hidden-focusable" href="#content">Saltar a contenido principal</a>
-    <a class="visually-hidden-focusable" href="#content">Saltar a barra de búsqueda</a>
+    <!-- Accesos directos al contenido principal para mayor accesibilidad -->
+    <a class="visually-hidden-focusable" href="#contenido_principal">Saltar a contenido principal</a>
+    <a class="visually-hidden-focusable" href="#barra_de_busqueda">Saltar a barra de búsqueda</a>
     
     <nav class="navbar">
       <div class="container-fluid">
         <!-- Botón para el menú lateral -->
-        <a class="btn btn-primary" data-bs-toggle="offcanvas" href="#offcanvasExample" role="button" aria-controls="offcanvasExample" style="background-color: transparent; border-color: transparent;">
-          <img src="../images/TresBarrasHorizontales.png" width="45" height="50">
-        </a>
+        <button type="button" data-bs-toggle="offcanvas" href="#offcanvasExample" role="button" aria-controls="offcanvasExample" style="background-color: transparent; border-color: transparent;">
+          <img src="../images/TresBarrasHorizontales.png" alt="Desplegar menú lateral izquierdo para acceso rápido"  width="45" height="50">
+        </button>
+        
         <!-- Botón para iniciar sesión -->
-        <a href="./IniciarSesion.html" style="margin: 10px;">
-          <button class="btn btn-dark" type="submit">Iniciar Sesión</button>
-        </a>
+        <a class="btn btn-dark" href="./IniciarSesion.html" role="button" style="margin: 10px;">Iniciar Sesión</a>
+
         <!-- Botón para la ayuda -->
-        <a href="./Ayuda.html" style="margin: 10px;">
-          <button type="button" class="btn btn-outline-dark">Ayuda</button>
-          <!-- <button class="btn btn-dark" type="submit">Ayuda</button> -->
-        </a>
+        <a class="btn btn-outline-dark" href="./Ayuda.html" role="button" style="margin: 10px;">Ayuda</a>
+
         <!-- Logo principal de la página -->
         <a class="mx-auto navbar-brand" href="../index.html" style="max-width: 100%;">
           <img src="../images/LogoPrincipal.png" width="170" height="130" >
         </a>
+
         <!-- Botón de buscar y campo input para buscar -->
-        <div class="d-flex" role="search" style="margin: 10px;">
-          <input class="form-control me-2" type="search" placeholder="Buscar" aria-label="Search">
+        <div class="d-flex" role="search" style="margin: 10px;" id="barra_de_busqueda">
+          <input class="form-control me-2" type="search" placeholder="Buscar" aria-label="Campo para introducir texto y realizar una búsqueda.">
           <button class="btn btn-dark" type="submit">Buscar</button>
         </div>
       </div>
     </nav>
-
     <br>
     
     <div class="container">
@@ -58,11 +57,11 @@
     <div class="container">
       <div class="row">
         <div class="col-lg-6 mb-5 mb-lg-0">
-          <img src="../images/RegistrarseImagen.webp" alt="Imagen de inicio de sesión" class="img-fluid">
+          <img src="../images/RegistrarseImagen.webp" alt="Imagen de inicio de sesión, se está sazonando un platillo" class="img-fluid">
         </div>
         <div class="col-lg-6">
           <br><br><br>
-          <h1 class="display-5 fw-bold lh-1 mb-3 text-center">Registrarse</h1><br>
+          <h1 class="display-5 fw-bold lh-1 mb-3 text-center" tabindex="0" id="contenido_principal">Registrarse</h1><br>
           <form class="text-center">
             <div class="row">
                 <div class="mb-3">
@@ -106,13 +105,11 @@
     <hr class="border-botton border-2 border-primary">
     <br><br>
 
-    <!-- Botón que devuelve al usuario al principio de la página -->
-    <button class="btn btn-dark float-end" onclick="deslizarArriba()" style="margin-right: 20px;">&#8593;</button>
-    
+
     <div class="container text-center">
       <div class="row align-items-center">
         <div class="col">
-          <h1 class="display-5 fw-bold lh-1 mb-3 text-center">Contacto</h1>
+          <h1 class="display-5 fw-bold lh-1 mb-3 text-center" tabindex="0">Contacto</h1>
         </div>
       </div>
       <hr class="border-botton border-2 border-primary" style="margin-bottom: 20px;">
@@ -146,58 +143,62 @@
         </div>
       </div>
     </div>
-    <br><br><br>
 
+    <!-- Botón que devuelve al usuario al principio de la página -->
+    <a tabindex="0" class="btn btn-dark float-end" onkeypress="deslizarArriba()" onclick="deslizarArriba()" role="button" style="margin-right: 20px;" aria-label="Acceder al comienzo de la página">&#8593;</a>
     
+    <br><br><br>
+    
+
     <!-- Barra lateral izquierda -->
     <div class="offcanvas offcanvas-start" tabindex="-1" id="offcanvasExample" aria-labelledby="offcanvasExampleLabel">
       <div class="offcanvas-header">
           <!-- Logo principal de la página -->
-          <a class="mx-auto navbar-brand" href="./index.html" style="display: block; margin: 0 auto; max-width: 100%;">
+          <a class="mx-auto navbar-brand" href="../index.html" style="display: block; margin: 0 auto; max-width: 100%;">
             <img src="../images/LogoSecundario.png" width="170" height="130">
-          </a>
-        
-        
-        <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+          </a>    
+        <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Cerrar menú lateral de la izquierda"></button>
       </div>
       <div class="offcanvas-body">
         <div>
           <hr class="border-botton border-2 border-primary">
           <!-- Enlace directo a la página de inicio de sesión -->
-          <a class="mx-auto navbar-brand" href="./IniciarSesion.html" style="max-width: 100%;">
-            <button type="button" class="btn btn-outline-dark" style="margin: 2%; border-color: rgba(255, 255, 255, 0);">Iniciar Sesión</button>
-          </a><br>
+          <a class="btn btn-outline-dark" href="./IniciarSesion.html" role="button" style="max-width: 100%; margin: 2%; border-color: rgba(255, 255, 255, 0);">Iniciar Sesión</a>
+          <br>
+          
           <!-- Enlace directo a la página de registro -->
-          <a class="mx-auto navbar-brand" href="./Registrarse.html" style="max-width: 100%;">
-            <button type="button" class="btn btn-outline-dark" style="margin: 2%; border-color:  rgba(255, 255, 255, 0)">Registrarse</button>
-          </a><br>
+          <a class="btn btn-outline-dark" href="./Registrarse.html" role="button" style="max-width: 100%; margin: 2%; border-color: rgba(255, 255, 255, 0);">Registrarse</a>
+          <br>
+
           <!-- Enlace directo a la página de ayuda -->
-          <a class="mx-auto navbar-brand" href="./Ayuda.html" style="max-width: 100%;">
-            <button type="button" class="btn btn-outline-dark" style="margin: 2%; border-color:  rgba(255, 255, 255, 0)">Ayuda</button>
-          </a><br>
+          <a class="btn btn-outline-dark" href="./Ayuda.html" role="button" style="max-width: 100%; margin: 2%; border-color: rgba(255, 255, 255, 0);">Ayuda</a>
+          <br>
+
           <hr class="border-botton border-2 border-primary">
+
           <!-- Enlace directo a la página de publicar receta -->
-          <a class="mx-auto navbar-brand" href="./PublicarReceta.html" style="max-width: 100%;">
-            <button type="button" class="btn btn-outline-dark" style="margin: 2%; border-color:  rgba(255, 255, 255, 0)">Publicar Receta</button>
-          </a><br>
+          <a class="btn btn-outline-dark" href="./PublicarReceta.html" role="button" style="max-width: 100%; margin: 2%; border-color: rgba(255, 255, 255, 0);">Publicar Receta</a>
+          <br>
+
           <!-- Enlace directo a la página de ver recetas -->
-          <a class="mx-auto navbar-brand" href="./VerReceta.html" style="max-width: 100%;">
-            <button type="button" class="btn btn-outline-dark" style="margin: 2%; border-color:  rgba(255, 255, 255, 0)">Mostrar Receta</button>
-          </a><br>
+          <a class="btn btn-outline-dark" href="./VerReceta.html" role="button" style="max-width: 100%; margin: 2%; border-color: rgba(255, 255, 255, 0);">Mostrar Receta</a>
+          <br>
+
           <!-- Enlace directo a la página de ver recetas gourmet -->
-          <a class="mx-auto navbar-brand" href="./RecetasGourmet.html" style="max-width: 100%; padding-left: 40;">
-            <button type="button" class="btn btn-outline-dark" style="margin: 2%; border-color:  rgba(255, 255, 255, 0)">Recetas gourmet</button>
-          </a><br>
+          <a class="btn btn-outline-dark" href="./RecetasEconomicas.html" role="button" style="padding-left: 50; max-width: 100%; margin: 2%; border-color: rgba(255, 255, 255, 0);">Recetas económicas</a>
+          <br>
+
+
           <!-- Enlace directo a la página de ver recetas sencillas -->
-          <a class="mx-auto navbar-brand" href="./RecetasSencillas.html" style="max-width: 100%; padding-left: 40;">
-            <button type="button" class="btn btn-outline-dark" style="margin: 2%; border-color:  rgba(255, 255, 255, 0)">Recetas sencillas</button>
-          </a><br>
+          <a class="btn btn-outline-dark" href="./RecetasSencillas.html" role="button" style="padding-left: 50; max-width: 100%; margin: 2%; border-color: rgba(255, 255, 255, 0);">Recetas sencillas</a>
+          <br>
+
           <!-- Enlace directo a la página de ver recetas económicas -->
-          <a class="mx-auto navbar-brand" href="./RecetasEconomicas.html" style="max-width: 100%; padding-left: 40;">
-            <button type="button" class="btn btn-outline-dark" style="margin: 2%; border-color:  rgba(255, 255, 255, 0)">Recetas económicas</button>
-          </a><br>
+          <a class="btn btn-outline-dark" href="./RecetasGourmet.html" role="button" style="padding-left: 50; max-width: 100%; margin: 2%; border-color: rgba(255, 255, 255, 0);">Recetas gourmet</a>
+          <br>
         </div>
       </div>
     </div>
+    
   </body>
 </html>

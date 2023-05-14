@@ -1,4 +1,4 @@
-<html>
+<html lang="es">
   <head>
     <script src="./src/js/tools.js"></script>
     <link rel="stylesheet" type="text/css" href="./src/css/style.css">
@@ -21,25 +21,24 @@
     <nav class="navbar">
       <div class="container-fluid">
         <!-- Botón para el menú lateral -->
-        <a class="btn btn-primary" data-bs-toggle="offcanvas" href="#offcanvasExample" role="button" aria-controls="offcanvasExample" style="background-color: transparent; border-color: transparent;">
-          <img src="./images/TresBarrasHorizontales.png" width="45" height="50">
-        </a>
+        <button type="button" data-bs-toggle="offcanvas" href="#offcanvasExample" role="button" aria-controls="offcanvasExample" style="background-color: transparent; border-color: transparent;">
+          <img src="./images/TresBarrasHorizontales.png" alt="Desplegar menú lateral izquierdo para acceso rápido"  width="45" height="50">
+        </button>
+        
         <!-- Botón para iniciar sesión -->
-        <a href="./src/IniciarSesion.html" style="margin: 10px;">
-          <button class="btn btn-dark" type="submit">Iniciar Sesión</button>
-        </a>
+        <a class="btn btn-dark" href="./src/IniciarSesion.html" role="button" style="margin: 10px;">Iniciar Sesión</a>
+
         <!-- Botón para la ayuda -->
-        <a href="./src/Ayuda.html" style="margin: 10px;">
-          <button type="button" class="btn btn-outline-dark">Ayuda</button>
-          <!-- <button class="btn btn-dark" type="submit">Ayuda</button> -->
-        </a>
+        <a class="btn btn-outline-dark" href="./src/Ayuda.html" role="button" style="margin: 10px;">Ayuda</a>
+
         <!-- Logo principal de la página -->
         <a class="mx-auto navbar-brand" href="../index.html" style="max-width: 100%;">
           <img src="./images/LogoPrincipal.png" width="170" height="130" >
         </a>
+
         <!-- Botón de buscar y campo input para buscar -->
-        <div class="d-flex" role="search" style="margin: 10px;">
-          <input class="form-control me-2" type="search" placeholder="Buscar" aria-label="Search">
+        <div class="d-flex" role="search" style="margin: 10px;" id="barra_de_busqueda">
+          <input class="form-control me-2" type="search" placeholder="Buscar" aria-label="Campo para introducir texto y realizar una búsqueda.">
           <button class="btn btn-dark" type="submit">Buscar</button>
         </div>
       </div>
@@ -47,35 +46,31 @@
     <br>
      
     <!-- Contenedor de las tarjetas Mostrar Recetas y Publicar Recetas -->
-    <div id="contenido_principal" class="container d-flex justify-content-center">      
+    <div class="container d-flex justify-content-center">      
       <div class="card border-0 d-inline-block mx-auto text-center" style="width: 30rem; height: 35rem; display: flex; justify-content: center; align-items: center;">
-        <img src="./images/Pasta.jpg" class="card-img-top" alt="..." style="width: 450; height: 300; margin-top: 15;">
+        <img src="./images/Pasta.jpg" class="card-img-top" alt="imagen de pasta con chili de la sección de mostrar recetas" style="width: 450; height: 300; margin-top: 15;">
         <div class="card-body" style="text-align: justify;">
-          <p>
+          <p tabindex="0" id="contenido_principal">
             La zona de recetas de la comunidad es el lugar donde nuestros usuarios pueden descubrir una 
             amplia variedad de recetas creativas y deliciosas. Aquí, los usuarios pueden explorar recetas nuevas y 
             emocionantes, además de aprender de los demás miembros de la comunidad.
           </p>
         </div>
-        <div class="card-body" style="text-align: center;">          
-          <a href="./src/VerReceta.html">
-            <button type="button" class="btn btn-outline-dark btn-lg">Mostrar Recetas</button>
-          </a>
+        <div class="card-body" style="text-align: center;"> 
+          <a  class="btn btn-outline-dark btn-lg" href="./src/VerReceta.html" role="button">Mostrar Recetas</a>
         </div>
       </div>
       <div class="card border-0 d-inline-block mx-auto text-center" style="width: 30rem; height: 35rem; display: flex; justify-content: center; align-items: center;">
-        <img src="./images/Tortita.jpg" class="card-img-top" alt="..." style="width: 450; height: 300; margin-top: 15;">
+        <img src="./images/Tortita.jpg" class="card-img-top" alt="imagen de tortitas con dulce de leche de la sección de publicar recetas" style="width: 450; height: 300; margin-top: 15;">
         <div class="card-body" style="text-align: justify;">
-          <p>
+          <p tabindex="0">
             ¡Queremos que compartas tus recetas favoritas con la comunidad! En nuestra página de publicación de 
             recetas, los usuarios pueden compartir sus propias creaciones culinarias con otros amantes de la comida 
             de todo el mundo. Entra ya y comparte tus recetas con la comunidad.
           </p>
         </div>
-        <div class="card-body" style="text-align: center;">          
-          <a href="./src/PublicarReceta.html">
-            <button type="button" class="btn btn-outline-dark btn-lg">Publicar Recetas</button>
-          </a>
+        <div class="card-body" style="text-align: center;">
+          <a  class="btn btn-outline-dark btn-lg" href="./src/PublicarReceta.html" role="button">Publicar Recetas</a>
         </div>
       </div>
     </div>
@@ -87,17 +82,17 @@
     <div class="container d-flex justify-content-center">
       <div class="card border-0 row g-0" style="width: 70rem; height: 21rem; display: flex; justify-content: center; align-items: center;">
         <div class="col-md-4">
-          <img src="./images/Salmon.jpg" class="card-img-top" alt="..." style="width: 450; height: 300; margin: 15;">
+          <img src="./images/Salmon.jpg" class="card-img-top" alt="" style="width: 450; height: 300; margin: 15;">
         </div>
         <div class="col-md-8">
           <div class="card-body" style="margin-left: 17rem; margin-right: 1rem; text-align: justify;">
-            <h1 class="display-5 fw-bold lh-1 mb-3">Ingrediente de oro</h1><br>
-            <p>
+            <h1 tabindex="0" class="display-5 fw-bold lh-1 mb-3">Ingrediente de oro</h1><br>
+            <p tabindex="0">
               El ingrediente de oro es la joya de la corona de nuestra red social de comida. Cada semana, presentamos un 
               ingrediente especial que se convierte en el ingrediente de oro. Este ingrediente es el centro de atención 
               de la comunidad y está diseñado para ayudar a aumentar las ganas de cocinar en nuestros usuarios.
             </p>
-            <p>
+            <p tabindex="0">
               El ingrediente de esta semana es el salmón.
             </p>
           </div>
@@ -109,7 +104,7 @@
     <br><br><br>
 
     <div class="container d-flex justify-content-center">
-      <h1 class="display-5 fw-bold lh-1 mb-3">Opiniones pupulares</h1><br>
+      <h1 class="display-5 fw-bold lh-1 mb-3" tabindex="0">Opiniones populares</h1><br>
     </div>
     <br><br><br>
 
@@ -118,35 +113,34 @@
       <div id="carouselExample" class="carousel slide" style="width: 800; height: 500;">
         <div class="carousel-inner">
           <div class="carousel-item active">
-            <img src="./images/Carrusel/OpinionMariaFernandez.webp" class="d-block w-100" alt="...">
+            <img src="./images/Carrusel/OpinionMariaFernandez.webp" class="d-block w-100" alt="">
             <div class="carousel-caption d-none d-md-block p-3 rounded" style="background-color: rgba(0, 0, 0, 0.800);">
-              <h5>María Fernández ★★★★☆</h5>
-              <p style="font-size: 16px;">Me encanta esta página de recetas, siempre encuentro algo nuevo y emocionante para preparar en casa</p>
-            </div>
-          </div>
-
-          <div class="carousel-item">
-            <img src="./images/Carrusel/OpinionAlejandroLopez.webp" class="d-block w-100" alt="...">
-            <div class="carousel-caption d-none d-md-block p-3 rounded" style="background-color: rgba(0, 0, 0, 0.800);">
-              <h5>Alejandro López ★★★☆☆</h5>
-              <p style="font-size: 16px;">Esta página es mi sitio web de referencia para buscar recetas nuevas y emocionantes, y siempre he encontrado algo que ha superado mis expectativas</p>
+              <h5 tabindex=0>María Fernández ★★★★☆</h5>
+              <p tabindex=0 style="font-size: 16px;">Me encanta esta página de recetas, siempre encuentro algo nuevo y emocionante para preparar en casa</p>
             </div>
           </div>
           <div class="carousel-item">
-            <img src="./images/Carrusel/OpinionAnaCastro.webp" class="d-block w-100" alt="...">
+            <img src="./images/Carrusel/OpinionAlejandroLopez.webp" class="d-block w-100" alt="">
             <div class="carousel-caption d-none d-md-block p-3 rounded" style="background-color: rgba(0, 0, 0, 0.800);">
-              <h5>Ana Castro ★★★★★</h5>
-              <p style="font-size: 16px;">Desde platos principales hasta postres y bebidas, esta página tiene todo lo que necesito para impresionar a mis amigos y familiares en la mesa</p>
+              <h5 tabindex=0>Alejandro López ★★★☆☆</h5>
+              <p tabindex=0 style="font-size: 16px;">Esta página es mi sitio web de referencia para buscar recetas nuevas y emocionantes, y siempre he encontrado algo que ha superado mis expectativas</p>
+            </div>
+          </div>
+          <div class="carousel-item">
+            <img src="./images/Carrusel/OpinionAnaCastro.webp" class="d-block w-100" alt="">
+            <div class="carousel-caption d-none d-md-block p-3 rounded" style="background-color: rgba(0, 0, 0, 0.800);">
+              <h5 tabindex="0">Ana Castro ★★★★★</h5>
+              <p tabindex="0" style="font-size: 16px;">Desde platos principales hasta postres y bebidas, esta página tiene todo lo que necesito para impresionar a mis amigos y familiares en la mesa</p>
             </div>
           </div>
         </div>
         <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample" data-bs-slide="prev">
           <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-          <span class="visually-hidden">Previous</span>
+          <span class="visually-hidden">Anterior elemento del carrusel</span>
         </button>
         <button class="carousel-control-next" type="button" data-bs-target="#carouselExample" data-bs-slide="next">
           <span class="carousel-control-next-icon" aria-hidden="true"></span>
-          <span class="visually-hidden">Next</span>
+          <span class="visually-hidden">Siguiente elemento del carrusel</span>
         </button>
       </div>
     </div>
@@ -165,59 +159,54 @@
           </a>
         
         
-        <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+        <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Cerrar menú lateral de la izquierda"></button>
       </div>
       <div class="offcanvas-body">
         <div>
           <hr class="border-botton border-2 border-primary">
           <!-- Enlace directo a la página de inicio de sesión -->
-          <a class="mx-auto navbar-brand" href="./src/IniciarSesion.html" style="max-width: 100%;">
-            <button type="button" class="btn btn-outline-dark" style="margin: 2%; border-color: rgba(255, 255, 255, 0);">Iniciar Sesión</button>
-          </a><br>
+          <a class="btn btn-outline-dark" href="./src/IniciarSesion.html" role="button" style="max-width: 100%; margin: 2%; border-color: rgba(255, 255, 255, 0);">Iniciar Sesión</a>
+          <br>
+          
           <!-- Enlace directo a la página de registro -->
-          <a class="mx-auto navbar-brand" href="./src/Resgistrarse.html" style="max-width: 100%;">
-            <button type="button" class="btn btn-outline-dark" style="margin: 2%; border-color:  rgba(255, 255, 255, 0)">Registrarse</button>
-          </a><br>
+          <a class="btn btn-outline-dark" href="./src/Registrarse.html" role="button" style="max-width: 100%; margin: 2%; border-color: rgba(255, 255, 255, 0);">Registrarse</a>
+          <br>
+
           <!-- Enlace directo a la página de ayuda -->
-          <a class="mx-auto navbar-brand" href="./src/Ayuda.html" style="max-width: 100%;">
-            <button type="button" class="btn btn-outline-dark" style="margin: 2%; border-color:  rgba(255, 255, 255, 0)">Ayuda</button>
-          </a><br>
+          <a class="btn btn-outline-dark" href="./src/Ayuda.html" role="button" style="max-width: 100%; margin: 2%; border-color: rgba(255, 255, 255, 0);">Ayuda</a>
+          <br>
+
           <hr class="border-botton border-2 border-primary">
+
           <!-- Enlace directo a la página de publicar receta -->
-          <a class="mx-auto navbar-brand" href="./src/PublicarReceta.html" style="max-width: 100%;">
-            <button type="button" class="btn btn-outline-dark" style="margin: 2%; border-color:  rgba(255, 255, 255, 0)">Publicar Receta</button>
-          </a><br>
+          <a class="btn btn-outline-dark" href="./src/PublicarReceta.html" role="button" style="max-width: 100%; margin: 2%; border-color: rgba(255, 255, 255, 0);">Publicar Receta</a>
+          <br>
+
           <!-- Enlace directo a la página de ver recetas -->
-          <a class="mx-auto navbar-brand" href="./src/VerReceta.html" style="max-width: 100%;">
-            <button type="button" class="btn btn-outline-dark" style="margin: 2%; border-color:  rgba(255, 255, 255, 0)">Mostrar Receta</button>
-          </a><br>
+          <a class="btn btn-outline-dark" href="./src/VerReceta.html" role="button" style="max-width: 100%; margin: 2%; border-color: rgba(255, 255, 255, 0);">Mostrar Receta</a>
+          <br>
+
           <!-- Enlace directo a la página de ver recetas gourmet -->
-          <a class="mx-auto navbar-brand" href="./src/RecetasGourmet.html" style="max-width: 100%; padding-left: 40;">
-            <button type="button" class="btn btn-outline-dark" style="margin: 2%; border-color:  rgba(255, 255, 255, 0)">Recetas gourmet</button>
-          </a><br>
+          <a class="btn btn-outline-dark" href="./src/RecetasEconomicas.html" role="button" style="padding-left: 50; max-width: 100%; margin: 2%; border-color: rgba(255, 255, 255, 0);">Recetas económicas</a>
+          <br>
+
+
           <!-- Enlace directo a la página de ver recetas sencillas -->
-          <a class="mx-auto navbar-brand" href="./src/RecetasSencillas.html" style="max-width: 100%; padding-left: 40;">
-            <button type="button" class="btn btn-outline-dark" style="margin: 2%; border-color:  rgba(255, 255, 255, 0)">Recetas sencillas</button>
-          </a><br>
+          <a class="btn btn-outline-dark" href="./src/RecetasSencillas.html" role="button" style="padding-left: 50; max-width: 100%; margin: 2%; border-color: rgba(255, 255, 255, 0);">Recetas sencillas</a>
+          <br>
+
           <!-- Enlace directo a la página de ver recetas económicas -->
-          <a class="mx-auto navbar-brand" href="./src/RecetasEconomicas.html" style="max-width: 100%; padding-left: 40;">
-            <button type="button" class="btn btn-outline-dark" style="margin: 2%; border-color:  rgba(255, 255, 255, 0)">Recetas económicas</button>
-          </a><br>
+          <a class="btn btn-outline-dark" href="./src/RecetasGourmet.html" role="button" style="padding-left: 50; max-width: 100%; margin: 2%; border-color: rgba(255, 255, 255, 0);">Recetas gourmet</a>
+          <br>
         </div>
       </div>
     </div>
     
-    
-    
-    
 
-    <!-- Botón que devuelve al usuario al principio de la página -->
-    <button class="btn btn-dark float-end" onclick="deslizarArriba()" style="margin-right: 20px;">&#8593;</button>
-    
     <div class="container text-center">
       <div class="row align-items-center">
         <div class="col">
-          <h1 class="display-5 fw-bold lh-1 mb-3 text-center">Contacto</h1>
+          <h1 tabindex="0" class="display-5 fw-bold lh-1 mb-3 text-center">Contacto</h1>
         </div>
       </div>
       <hr class="border-botton border-2 border-primary" style="margin-bottom: 20px;">
@@ -252,6 +241,9 @@
       </div>
     </div>
 
+    <!-- Botón que devuelve al usuario al principio de la página -->
+    <a tabindex="0" class="btn btn-dark float-end" onkeypress="deslizarArriba()" onclick="deslizarArriba()" role="button" style="margin-right: 20px;" aria-label="Acceder al comienzo de la página">&#8593;</a>
+    
     <br><br><br>
 
   </body>
